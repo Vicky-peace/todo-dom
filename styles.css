@@ -1,9 +1,10 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-:root{
+  }
+  
+  :root {
     --Very-Light-Gray: hsl(0, 0%, 98%);
     --Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
     --Light-Grayish-Blue: hsl(233, 11%, 84%);
@@ -16,46 +17,56 @@
     ---Dark-Grayish-Blue: hsl(234, 11%, 52%);
     ---Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
     ---Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
-}
-
-body{
-    font-family: "Josefin Sans",sans-serif;
+  }
+  
+  body {
+    font-family: "Josefin Sans", sans-serif;
     font-size: 18px;
     background-color: var(---Very-Dark-Blue);
     min-height: 100vh;
-}
-
-.wrapper{
+  }
+  
+  .wrapper {
     display: flex;
     justify-content: center;
     flex-direction: column;
     width: 500px;
     margin: -230px auto 0 auto;
-}
-.background-img{
+  }
+  
+  .background-img {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
     height: 40vh;
-}
-h1{
+  }
+  
+  h1 {
     font-size: 30px;
     text-transform: uppercase;
     color: #fff;
     letter-spacing: 5px;
-}
-ul,
-li{
+  }
+  
+  ul,
+  li {
     list-style: none;
-}
-.header{
+  }
+  
+  .header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
-   
-}
-
-.input input{
+  }
+  
+  .input {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .input input {
+    flex-grow: 1;
     width: 85%;
     background-color: var(--Very-Dark-Desaturated-Blue);
     height: 50px;
@@ -64,51 +75,112 @@ li{
     padding: 15px;
     border: none;
     border-radius: 15px;
-}
-#submit-btn{
-    border-radius: 10px;
-    padding: 15px;
-    margin: 5px;
+  }
+  
+  .input button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-left: 10px;
+    border: none;
     background-color: var(--Very-Dark-Desaturated-Blue);
-    color: #fff;
-    overflow: hidden;
+    color: white;
     cursor: pointer;
-}
-#submit-btn:hover{
-    background-color: var(---Dark-Grayish-Blue);
-}
-.todo-inputs{
+    border-radius: 4px;
+  }
+  
+  .input button:hover {
+    background-color: #0056b3;
+  }
+  
+  .todo-inputs {
     background-color: var(--Very-Dark-Desaturated-Blue);
     width: 100%;
     margin-top: 2.5rem;
     border-radius: 1px;
-    
-}
-
-.inputs ul li{
-    width: 100%;
-    background-color: hsl(235, 24%, 19%);
-    height: 50px;
-    padding: 15px;
-    border-bottom: 1px solid hsl(233,18%, 38%);
-    color: #fff;
-    font-size: 16px;
-
-}
-.status{
+  }
+  
+  .todo-inputs ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .todo-inputs li {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 2rem;
-    padding: 15px;
+    padding: 10px;
+    border-bottom: 1px solid hsl(233, 18%, 38%);
     color: #fff;
-    font-size: 15px;
-    
-}
-.items-left,
-.all,
-.active,
-.completed,
-.clear-completed{
- cursor: pointer;
-}
-
+  }
+  
+  .todo-inputs li input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .todo-inputs li span {
+    flex-grow: 1;
+  }
+  
+  .todo-inputs li .remove-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: red;
+  }
+  
+  .todo-inputs li .remove-btn:hover {
+    color: darkred;
+  }
+  
+  .todo-inputs li .completed {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+  .status {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+  
+  .status div {
+    cursor: pointer;
+  }
+  
+  .status div:hover {
+    text-decoration: underline;
+  }
+  
+  @media (min-width: 1600px) {
+    .wrapper {
+      width: 800px; /* Increase the width of the wrapper for larger screens */
+      margin: -200px auto 0 auto; /* Adjust margin to center the content better */
+    }
+  
+    .input input {
+      height: 60px; /* Increase the height of the input field */
+      font-size: 1.2rem; /* Increase font size */
+      border-radius: 20px; /* Adjust border radius */
+    }
+  
+    .input button {
+      padding: 15px 30px; /* Increase padding for the button */
+      font-size: 1.2rem; /* Increase font size */
+    }
+  
+    h1 {
+      font-size: 36px; /* Increase the font size for the header */
+      letter-spacing: 6px; /* Increase letter spacing */
+    }
+  
+    .todo-inputs li {
+      padding: 15px; /* Increase padding for list items */
+      font-size: 1.1rem; /* Increase font size */
+    }
+  
+    .status {
+      padding: 15px 0; /* Increase padding for the status bar */
+      font-size: 1.1rem; /* Increase font size */
+    }
+  }
+  
